@@ -21,6 +21,10 @@ app.use(cors())
 
 app.use(require('./routes/auth'))
 
+app.get("/", (req, res) => {
+    res.send("server run success")
+})
+
 app.listen(PORT, () => {
     console.log('server run successfully at', PORT);
 })
